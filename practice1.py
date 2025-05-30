@@ -13,6 +13,8 @@ years_of_study = st.number_input("Years of study", 6, 20)
 level_of_studies = st.selectbox("Level of studies", ["High school degree", "Bachelor degree", "Master degree", "PHD degree"])
 number_of_certification = st.selectbox("Nummber of certicates", ["1","2", "3", "4", "5"])
 work_domain = st.selectbox("Work domain", ["Information technology/Computing", "Healthcare/Medicine/Nursing", "Education/Teaching", "Engineering/Industry/Constuction", "Finance/Baking/Insurance", "Sales/Marketing/Commerce", "Administration/Management/Human Ressources", "Arts/Culture/Media/Communication", "Transportation/Logistics", "Hospitality/Food service/Tourism", "Agriculture/Agri-food", "Law/Legal service", "Research/Sciences", "Social service/social work", "Public administration/Government", "International trade/Export-Import", "Energy/Environment", "Sport/Recreation/Entertainment", "Real Estate", "Craftsmanship/Manufacturing/Maintenance", "Telecommunication", "Multimedia/Design/Graphic arts", "Pharmaceutical/Biotechnology", "Security/Defense/Police", "Fashion/Textile/Luxury Goods"])
+job_levels = st.selectbox("Job level", ["Intern", "Assistant", "Junior", "Intermediate/Analyst/Specialist", "Senior"])
+work_sectors = st.selectbox("Work sector", ["Public/Government sector", "NGOs/Internation Organizations", "Private companies", "Research Institutes/Universities", "Health sector","Techonology sector", "Industrial sector", "Freelance/Independent", "Informal/Community sector"])
 #Generate the output
 if st.button("Generate the output"):
     monthly_estimated_salary = ...# calculate the salary in american dollars using a given formula
