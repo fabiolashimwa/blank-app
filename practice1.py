@@ -1,10 +1,12 @@
 import streamlit as st
+from PIL import Image
+import pytesseract
+import datetime
 st.title("Salary predictor")
 # This line of code displays Salary predictor in a title format
 st.write("Hi, welcome...do you want to know your estimated monthly salary? Let's start😊🤗")
 # This line of code write arguments to our app
 first_name = st.text_input("First Name")
-st.badge(first_name)
 last_name = st.text_input("Last name")
 gender = st.selectbox("Gender", ["Male", "Female"])
 age = st.number_input("Your age", 15, 80, 30, 1)
