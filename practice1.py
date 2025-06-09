@@ -47,7 +47,7 @@ if st.button("Generate the output"):
     st.write(f"The monthly salary is estimated to: **${monthly_estimated_salary:.4f}** USD")
 
 st.markdown("---")
-st.caption("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
+st.badge("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
 # displays the text in small font
 feedback = st.feedback("faces")
 # displays emoji faces
