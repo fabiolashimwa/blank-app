@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import pickle
 import joblib
 
 df = pd.read_csv("salaryData.csv")
@@ -24,7 +23,7 @@ years_of_experience = st.slider("Years of experience", 1, 29)
 job_titles = sorted(df["Job Title"].dropna().unique())
 job_title = st.selectbox("Job title", job_titles)
 
-model, model_columns = joblib.load('salary_predictor_model.pkl')
+model, model_columns = joblib.load('Salary predictor model.pkl')
 inputs = pd.DataFrame([{"Age": age,"Gender": gender,"Education Level": level_of_studies,"Job Title": job_title,"Years of Experience": years_of_experience}])
 data = pd.concat([inputs,df], axis=0)
 data_converted = pd.get_dummies(data, columns=["Gender", "Education Level", "Job Title"], drop_first=True)

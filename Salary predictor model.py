@@ -1,6 +1,5 @@
 import pandas as pd
 # We import pandas to load our data
-import pickle
 
 df = pd.read_csv("salaryData.csv")
 # We read our csvfile
@@ -40,4 +39,4 @@ print(mean_squared_error(y_test, y_predictor, squared=False))
 # Check the differneces between predicted salaries and actual salaries
 
 import joblib
-joblib.dump((model, x.columns), 'salary_predictor_model.pkl')
+joblib.dump((model, x.columns), 'Salary predictor model.pkl')
