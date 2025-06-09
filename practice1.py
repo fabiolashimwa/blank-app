@@ -41,10 +41,15 @@ for col in model_columns:
 inputs_converted = inputs_converted[model_columns]
 # Update the model columns
 
+currency_rates = {"INR": 1, "USD": 0.012, "EUR": 0.01, "KES": 1.51, "JPY":1.69, "GBP":0.0086 ,"AUD":0.018 , "CAD":0.016}
+currency = st.selectbox("Choose your preferred currency", list(currency_rates.keys()))
+
 if st.button("Generate the output"):
 # This line displays a button 
-    monthly_estimated_salary =model.predict(inputs_converted)[0]
-    st.write(f"The monthly salary is estimated to: **${monthly_estimated_salary:.4f}** USD")
+    monthly_estimated_salary_in_INR =model.predict(inputs_converted)[0]
+    converted_salary =  monthly_estimated_salary_in_INR * currency_rates[currency]
+
+    st.write(f"The monthly salary is estimated to: **${converted_salary:.4f}{currency}**")
 
 st.markdown("---")
 st.badge("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
