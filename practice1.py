@@ -22,12 +22,22 @@ years_of_experience = st.slider("Years of experience", 1, 29)
 # This display a slider to select the years of experience in the range 1-29
 job_titles = sorted(df["Job Title"].dropna().unique())
 job_title = st.selectbox("Job title", job_titles)
-model = joblib.load('salary_predictor_model.pkl')
 
+model, model_columns = joblib.load('salary_predictor_model.pkl')
+inputs = pd.DataFrame([{"Age": age,"Gender": gender,"Education Level": level_of_studies,"Job Title": job_title,"Years of Experience": years_of_experience}])
+data = pd.concat([inputs,df], axis=0)
+data_converted = pd.get_dummies(data, columns=["Gender", "Education Level", "Job Title"], drop_first=True)
+inputs_converted = data_converted.iloc[0:1]
+
+for col in model_columns:
+    if col not in inputs_converted:
+       inputs_converted[col] = 0
+
+inputs_converted = inputs_converted[model_columns]
+    
 if st.button("Generate the output"):
 # This line displays a button 
-    monthly_estimated_salary =model.predict()
-
-    st.write(f"The monthly salary is estimated to: {monthly_estimated_salary} USD")
+    monthly_estimated_salary =model.predict(inputs_converted[0])
+    st.write(f"The monthly salary is estimated to: **${monthly_estimated_salary}** USD")
 st.feedback('faces')
 # This line displays a rating button
