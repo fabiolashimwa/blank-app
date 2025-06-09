@@ -1,7 +1,7 @@
 import pandas as pd
 # We import pandas to load our data
 
-df = pd.read_csv("C:\Users\nafis\salaryData.csv")
+df = pd.read_csv("salaryData.csv")
 # We read our csvfile
 
 df.dropna(inplace = True)

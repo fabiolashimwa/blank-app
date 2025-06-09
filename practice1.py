@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-df = pd.read_csv("C:\Users\nafis\Downloads\salaryData.csv")
+df = pd.read_csv("salaryData.csv")
 st.title("Salary predictor 🔮")
 # This line of code displays Salary predictor in a title format
 st.write("Hi, welcome...do you want to know your estimated monthly salary? Let's start😊🤗")
