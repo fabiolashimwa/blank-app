@@ -4,6 +4,12 @@ import pandas as pd
 df = pd.read_csv("salaryData.csv")
 # We read our csvfile
 
+print(df.describe())
+# Summary statistics
+
+print(df.isnull().sum())
+# check for missing values their number
+
 df.dropna(inplace = True)
 # We remove rows with missing values
 df_converted = pd.get_dummies(df, columns=["Gender", "Education Level", "Job Title"], drop_first=True)

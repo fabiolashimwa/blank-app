@@ -48,6 +48,8 @@ if st.button("Generate the output"):
 
 st.markdown("---")
 st.caption("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
+# displays the text in small font
 feedback = st.feedback("faces")
+# displays emoji faces
 if st.button("Submit Feedback"):
-    st.balloons
+    st.balloons()
