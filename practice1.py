@@ -44,6 +44,11 @@ inputs_converted = inputs_converted[model_columns]
 if st.button("Generate the output"):
 # This line displays a button 
     monthly_estimated_salary =model.predict(inputs_converted)[0]
-    st.write(f"The monthly salary is estimated to: **${monthly_estimated_salary}** USD")
-st.feedback('faces')
-# This line displays a rating button
+    st.write_stream(f"The monthly salary is estimated to: **${monthly_estimated_salary:.4f}** USD")
+
+st.markdown("---")
+st.header("Thank you for using Salary predictor📈 ")
+st.subheader("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
+feedback = st.feedback("faces")
+if st.button("Submit Feedback"):
+    st.balloons
