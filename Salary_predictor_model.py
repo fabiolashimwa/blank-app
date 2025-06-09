@@ -31,12 +31,10 @@ model.fit(x_train,y_train)
 y_predictor = model.predict(x_test)
 # The model predicts salaries (y_salaries) for the testing set (x_test)
 
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import r2_score
 # Metrics are used to evaluate model performance
 print(r2_score(y_test, y_predictor))
 # Determine the quality of prediction 
-print(mean_squared_error(y_test, y_predictor, squared=False))
-# Check the differneces between predicted salaries and actual salaries
 
 import joblib
 # Save our Salary predictor model
