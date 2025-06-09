@@ -6,12 +6,28 @@ df = pd.read_csv("salaryData.csv")
 
 print(df.describe())
 # Summary statistics
+## OUTPUT
+#       Age             Years of Experience                 Salary
+#count  373.000000           373.000000     373.000000
+#mean    37.431635            10.030831  100577.345845
+#std      7.069073             6.557007   48240.013482
+#min     23.000000             0.000000     350.000000
+#25%     31.000000             4.000000   55000.000000
+#50%     36.000000             9.000000   95000.000000
+#75%     44.000000            15.000000  140000.000000
+#max     53.000000            25.000000  250000.000000
 
 print(df.isnull().sum())
 # check for missing values their number
+## OUTPUT
+#Age                    0
+#Gender                 0
+#Education Level        0
+#Job Title              0
+#Years of Experience    0
+#Salary                 0
+## There are no missing values in our dataset
 
-df.dropna(inplace = True)
-# We remove rows with missing values
 df_converted = pd.get_dummies(df, columns=["Gender", "Education Level", "Job Title"], drop_first=True)
 # We converte categorical features into numbers
 # This line of code looks at the original dataframe(df) then finds the listed colums and replace them with numeric columns(0 or 1)
@@ -41,6 +57,7 @@ from sklearn.metrics import r2_score
 # Metrics are used to evaluate model performance
 print(r2_score(y_test, y_predictor))
 # Determine the quality of prediction 
+## OUTPUT = 0.9116655427773879 which is close to 1. Our prediction model is good
 
 import joblib
 # Save our Salary predictor model
