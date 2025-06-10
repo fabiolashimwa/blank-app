@@ -29,7 +29,7 @@ print(df.isnull().sum())
 ## There are two missing values for each feature in our dataset
 
 df.dropna(inplace=True)
-# The missing rows are removed
+# The rows with missing values are removed
 
 df_converted = pd.get_dummies(df, columns=["Gender", "Education Level", "Job Title"], drop_first=True)
 # We converte categorical features into numbers
