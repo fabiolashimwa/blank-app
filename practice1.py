@@ -57,4 +57,4 @@ st.badge("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
 feedback = st.feedback("stars")
 # displays stars for rating
 if st.button("Submit Feedback"):
-    st.balloons()
+    st.write ("Made with ❤️ by team SKYSHIELD")
