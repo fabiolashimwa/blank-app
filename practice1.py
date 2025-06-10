@@ -19,8 +19,8 @@ marital_status = st.pills("Marital status", ["Single", "Married" ,"Divorced"])
 # This line allows a single select option
 level_of_studies = st.selectbox("Level of studies", ["Bachelor", "Master", "PhD"])
 # This displays a box with study level options
-years_of_experience = st.slider("Years of experience", 1, 29)
-# This display a slider to select the years of experience in the range 1-29
+years_of_experience = st.slider("Years of experience", 0.0, 25.0, step=0.5)
+# This display a slider to select the years of experience in the range 0-25
 job_titles = sorted(df["Job Title"].dropna().unique())
 job_title = st.selectbox("Job title", job_titles)
 # Job tiltes are extracted from the csv file then creates a dropdown menu of job titles
