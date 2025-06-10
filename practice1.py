@@ -13,8 +13,8 @@ last_name = st.text_input("Last name")
 # These two lines allow the user to input his/her information
 gender = st.selectbox("Gender", ["Male", "Female"])
 # This line displays a box with gender option to choose
-age = st.number_input("Your age", 15, 53, 30, 18, 80)
-# This line allows the user to input his age. The minimum age is 15 and max_age is 80. The default age is 30 and the difference between ages is 1
+age = st.number_input("Your age", 15, 53, 30, 1)
+# This line allows the user to input his age. The minimum age is 15 and max_age is 53. The default age is 30 and the difference between ages is 1
 marital_status = st.pills("Marital status", ["Single", "Married" ,"Divorced"])
 # This line allows a single select option
 level_of_studies = st.selectbox("Level of studies", ["Bachelor", "Master", "PhD"])
@@ -49,7 +49,7 @@ if st.button("Generate the output"):
     monthly_estimated_salary_in_INR =model.predict(inputs_converted)[0]
     converted_salary =  monthly_estimated_salary_in_INR * currency_rates[currency]
 
-    st.write(f"The monthly salary is estimated to: **${converted_salary:.4f}{currency}**")
+    st.write(f"The monthly salary is estimated to: **{converted_salary:.4f}{currency}**")
 
 st.markdown("---")
 st.badge("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
