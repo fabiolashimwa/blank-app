@@ -51,7 +51,7 @@ if st.button("Generate the output"):
 
     st.write(f"The monthly salary is estimated to: **${converted_salary:.4f}{currency}**")
 
-
+st.markdown("---")
 st.badge("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
 # displays a small colored badge
 feedback = st.feedback("stars")
