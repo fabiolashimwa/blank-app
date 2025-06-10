@@ -45,13 +45,23 @@ currency_rates = {"INR": 1, "USD": 0.012, "EUR": 0.01, "KES": 1.51, "JPY":1.69, 
 currency = st.selectbox("Choose your preferred currency", list(currency_rates.keys()))
 
 if st.button("Generate the output"):
-# This line displays a button 
+# This line displays a buttosn 
     monthly_estimated_salary_in_INR =model.predict(inputs_converted)[0]
     converted_salary =  monthly_estimated_salary_in_INR * currency_rates[currency]
 
     st.write(f"The monthly salary is estimated to: **{converted_salary:.4f}{currency}**")
 
 st.markdown("---")
+st.markdown(
+    """
+<style>
+.stApp{
+    background-color: #fff8dc;
+}
+</style>
+""",
+unsafe_allow_html=True
+)
 st.badge("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
 # displays a small colored badge
 feedback = st.feedback("stars")
