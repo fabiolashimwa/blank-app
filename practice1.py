@@ -13,7 +13,7 @@ last_name = st.text_input("Last name")
 # These two lines allow the user to input his/her information
 gender = st.selectbox("Gender", ["Male", "Female"])
 # This line displays a box with gender option to choose
-age = st.number_input("Your age", 23, 53, 30, 1)
+age = st.number_input("Your age", 15, 53, 30, 18, 80)
 # This line allows the user to input his age. The minimum age is 15 and max_age is 80. The default age is 30 and the difference between ages is 1
 marital_status = st.pills("Marital status", ["Single", "Married" ,"Divorced"])
 # This line allows a single select option
