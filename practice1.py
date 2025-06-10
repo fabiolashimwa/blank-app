@@ -4,7 +4,7 @@ import joblib
 
 df = pd.read_csv("salaryData.csv")
 st.title("Salary predictor 🔮")
-# This line of code displays Salary predictor in a title format
+# Displays Salary predictor in a title format
 st.write("Hi, welcome...do you want to know your estimated monthly salary? Let's start😊🤗")
 # This line of code write arguments to our app
 
@@ -13,18 +13,19 @@ last_name = st.text_input("Last name")
 # These two lines allow the user to input his/her information
 gender = st.selectbox("Gender", ["Male", "Female"])
 # This line displays a box with gender option to choose
-age = st.number_input("Your age", 15, 53, 30, 18, 80)
-# This line allows the user to input his age. The minimum age is 15 and max_age is 80. The default age is 30 and the difference between ages is 1
+age = st.number_input("Your age", 23, 53, 30, 1)
+# This line allows the user to input his age. The minimum age is 23 and max_age is 53. The default age is 30 and the difference between ages is 1
 marital_status = st.pills("Marital status", ["Single", "Married" ,"Divorced"])
 # This line allows a single select option
 level_of_studies = st.selectbox("Level of studies", ["Bachelor", "Master", "PhD"])
+# This displays a box with study level options
 years_of_experience = st.slider("Years of experience", 1, 29)
 # This display a slider to select the years of experience in the range 1-29
 job_titles = sorted(df["Job Title"].dropna().unique())
 job_title = st.selectbox("Job title", job_titles)
-# Job tiltes are extracted from the csv file then creates a dropdown menu 
+# Job tiltes are extracted from the csv file then creates a dropdown menu of job titles
 model, model_columns = joblib.load('salary_predictor_model.pkl')
-# Loads salary predictor model
+# Loads salary predictor model 
 inputs = pd.DataFrame([{"Age": age,"Gender": gender,"Education Level": level_of_studies,"Job Title": job_title,"Years of Experience": years_of_experience}])
 # User data uses same frame as the training data
 data = pd.concat([inputs,df], axis=0)
