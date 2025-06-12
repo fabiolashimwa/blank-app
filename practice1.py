@@ -12,11 +12,11 @@ first_name = st.text_input("First Name")
 last_name = st.text_input("Last name")
 # These two lines allow the user to input his/her information
 gender = st.selectbox("Gender", ["Male", "Female"])# This line displays a box with gender option to choose
-age = st.number_input("Your age", 15, 75, 30, 1)
-# This line allows the user to input his age. The minimum age is 15 and max_age is 75. The default age is 30 and the difference between ages is 1
+age = st.number_input("Your age", 20, 75, 30, 1)
+# This line allows the user to input his age. The minimum age is 20 and max_age is 75. The default age is 30 and the difference between ages is 1
 marital_status = st.pills("Marital status", ["Single", "Married" ,"Divorced"])
 # This line allows a single select option
-level_of_studies = st.selectbox("Level of studies", ["High school","Bachelor", "Master", "PhD"])
+level_of_studies = st.selectbox("Level of studies", ["Bachelor", "Master", "PhD"])
 # This displays a box with study level options
 years_of_experience = st.slider("Years of experience", 0.0, 25.0, step=0.5)
 # This display a slider to select the years of experience in the range 0-25
@@ -67,4 +67,4 @@ st.badge("⭐ Enjoyed the experience? We'd love to hear your feedback!💖")
 feedback = st.feedback("stars")
 # displays stars for rating
 if st.button("Submit Feedback"):
-    st.write ("Made with ❤️ by team SKYSHIELD")
+    st.write ("Made with love❤️ and care🤗 by team SKYSHIELD")
