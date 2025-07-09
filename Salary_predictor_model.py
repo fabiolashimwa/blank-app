@@ -2,7 +2,7 @@ import pandas as pd
 # We import pandas to load our data
 
 df = pd.read_csv("salaryData.csv")
-# We read our csvfile
+# read csvfile
 
 print(df.describe())
 # Summary statistics
