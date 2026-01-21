@@ -7,12 +7,12 @@ The salary predictor is a group project developed as part of the course *Informa
 To design predictive application that estimate salaries using data analysis and modeling techniques.
 
 ## Dataset Overview
-Structured datasets containing relevant features like years of experience, marital status, age for salary estimation.
+Our dataset contains 373 entries with relevant features like years of experience, education level, marital status, age for salary estimation.
 
 ## Methodology
-- Data cleaning and preprocessing
-- Exploratory data analysis
-- Predictive modeling
+- Data cleaning and preprocessing using pandas
+- Exploratory data analysis including ummary statistics with pandas
+- Predictive modeling using RandomForestRegressor
 - Deployment using a Streamlit web interface
 
 ## Tools
