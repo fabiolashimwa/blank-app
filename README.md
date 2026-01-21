@@ -1,19 +1,37 @@
-# 🎈 Blank app template
+# Salary Predictor 
 
-A simple Streamlit app template for you to modify!
+**Introduction**
+The salary predictor is a group project developed as part of the course *Information Security Governance and Cloud* (March 2025).
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Objective
+To design predictive application that estimate salaries using data analysis and modeling techniques.
 
-### How to run it on your own machine
+## Dataset Overview
+Structured datasets containing relevant features like years of experience, marital status, age for salary estimation.
 
-1. Install the requirements
+## Methodology
+- Data cleaning and preprocessing
+- Exploratory data analysis
+- Predictive modeling
+- Deployment using a Streamlit web interface
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## Tools
+- Python
+- Streamlit
 
-2. Run the app
+## Results
+A functionnal Salary prediction application
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## How to Run
+*Option 1:* Use the Live Application
+Access the application directly via the deployed Streamlit link.
+
+*Option 2:* Run the Application Locally
+
+Clone the repository, install the required dependencies, and run the Streamlit application using the following commands in your terminal:
+```bash
+
+git clone https://github.com/USERNAME/REPOSITORY-NAME.git
+cd REPOSITORY-NAME
+pip install -r requirements.txt
+streamlit run application-name.py
