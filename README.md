@@ -24,7 +24,7 @@ A functionnal Salary prediction application
 
 ## How to Run
 *Option 1:* Use the Live Application  
-Access the application directly via the deployed Streamlit link.
+Access the application directly via the deployed Streamlit link: https://fabiolashimwa-blank-app-practice1-nstman.streamlit.app/
 
 *Option 2:* Run the Application Locally  
 Clone the repository, install the required dependencies, and run the Streamlit application using the following commands in your terminal:
