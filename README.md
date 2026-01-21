@@ -23,11 +23,10 @@ Structured datasets containing relevant features like years of experience, marit
 A functionnal Salary prediction application
 
 ## How to Run
-*Option 1:* Use the Live Application
+*Option 1:* Use the Live Application  
 Access the application directly via the deployed Streamlit link.
 
-*Option 2:* Run the Application Locally
-
+*Option 2:* Run the Application Locally  
 Clone the repository, install the required dependencies, and run the Streamlit application using the following commands in your terminal:
 ```bash
 
