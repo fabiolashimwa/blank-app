@@ -1,7 +1,7 @@
 # Salary Predictor 
 
-## Introduction
-The salary predictor is a group project developed as part of the course *Information Security Governance and Cloud* (March 2025).
+## Context
+Group project developed as part of the course *Information Security Governance and Cloud*.
 
 ## Objective
 To design predictive application that estimate salaries using data analysis and modeling techniques.
